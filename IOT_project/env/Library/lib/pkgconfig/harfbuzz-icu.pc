@@ -1,0 +1,11 @@
+prefix=c:/Users/NGAIVINH/Desktop/New folder/IOT_project/env/Library
+includedir=${prefix}/include
+libdir=${prefix}/lib
+
+Name: harfbuzz-icu
+Description: HarfBuzz text shaping library ICU integration
+Version: 4.3.0
+Requires: harfbuzz =  4.3.0
+Libs: -L${libdir} -lharfbuzz-icu
+Libs.private: c:/Users/NGAIVINH/Desktop/New folder/IOT_project/env/Library/lib/icuuc.lib
+Cflags: -I${includedir}/harfbuzz
