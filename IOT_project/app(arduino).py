@@ -1,19 +1,11 @@
 import cv2
 import numpy as np
-import os
 import logging
-from flask import Flask, render_template, Response
-from flask_socketio import SocketIO
 import time
-from typing import List
 import serial
 
-app = Flask(__name__)
-socketio = SocketIO(app)
-
-
 logging.basicConfig(
-    filename='app.log',
+    filename='app(arduino).log',
     level=logging.INFO,
     format='%(asctime)s - %(levelname)s - %(message)s',
 )
@@ -32,20 +24,11 @@ net = cv2.dnn.readNetFromDarknet(modelConfig, modelWeights)
 net.setPreferableBackend(cv2.dnn.DNN_BACKEND_OPENCV)
 net.setPreferableTarget(cv2.dnn.DNN_TARGET_CPU)
 
-detected_objects = {}
-cap = None
-
-arduino_port = 'COM3'  #port của arduino
+arduino_port = 'COM5'
 baud_rate = 9600
 arduino = serial.Serial(arduino_port, baud_rate)
 
-animal_classes = {
-    'cat', 'dog', 'horse', 'sheep', 'cow', 
-    'elephant', 'bear', 'zebra', 'giraffe', 'bird'
-}
-
-def findObjects(outputs: List[np.ndarray], img: np.ndarray) -> List[str]:
-    global detected_objects
+def findObjects(outputs, img):
     hT, wT, _ = img.shape
     bbox, classIds, confs = [], [], []
 
@@ -61,94 +44,53 @@ def findObjects(outputs: List[np.ndarray], img: np.ndarray) -> List[str]:
                 classIds.append(classId)
                 confs.append(float(confidence))
 
-    try:
-        indices = cv2.dnn.NMSBoxes(bbox, confs, confThreshold, nmsThreshold)
-        current_detected = {}
+    indices = cv2.dnn.NMSBoxes(bbox, confs, confThreshold, nmsThreshold)
+    detected_person = False
 
-        if indices is not None and len(indices) > 0:
-            for i in indices.flatten():
-                box = bbox[i]
-                x, y, w, h = box
-                cv2.rectangle(img, (x, y), (x + w, y + h), (255, 0, 255), 2)
-                label = f'{classNames[classIds[i]].upper()} {int(confs[i] * 100)}%'
-                cv2.putText(img, label, (x, y - 10), cv2.FONT_HERSHEY_SIMPLEX, 0.6, (255, 0, 255), 2)
+    if indices is not None and len(indices) > 0:
+        for i in indices.flatten():
+            box = bbox[i]
+            x, y, w, h = box
+            cv2.rectangle(img, (x, y), (x + w, y + h), (255, 0, 255), 2)
+            label = f'{classNames[classIds[i]].upper()} {int(confs[i] * 100)}%'
+            cv2.putText(img, label, (x, y - 10), cv2.FONT_HERSHEY_SIMPLEX, 0.6, (255, 0, 255), 2)
 
-                object_name = classNames[classIds[i]]
-                if object_name in animal_classes:
-                    arduino.write(b'1')
-                    continue
-                else:
-                    current_detected[object_name] = current_detected.get(object_name, 0) + 1
+            if classNames[classIds[i]] == 'person':
+                detected_person = True
+                arduino.write(b'1') 
 
-        for obj, count in current_detected.items():
-            if obj in detected_objects:
-                detected_objects[obj] += count
-            else:
-                detected_objects[obj] = count
-
-        # Phát sự kiện cho các đối tượng đã phát hiện đến client
-        socketio.emit('update_objects', {
-            'objects': [{'name': obj, 'count': detected_objects[obj]} for obj in detected_objects],
-            'total_count': sum(detected_objects.values())
-        })
-    except Exception as e:
-        logging.error("Lỗi nhận dạng vật thể: %s", e)
-    
-    return list(detected_objects.keys())
+    return detected_person
 
 def get_frame():
-    global cap
-    if cap is None:
-        cap = cv2.VideoCapture(0)
-        if not cap.isOpened():
-            logging.error("Không thể mở camera.")
-            return None
+    cap = cv2.VideoCapture(0, cv2.CAP_DSHOW)
+    #cap = cv2.VideoCapture(0)
+    if not cap.isOpened():
+        logging.error("Cannot open camera.")
+        return None
     time.sleep(0.2)
     ret, img = cap.read()
-    if not ret:
-        logging.warning("Không thể nhận khung hình từ camera. Đang khởi tạo lại camera...")
-        cap.release() 
-        cap = None  
-        return None
+    cap.release()  
+    return img if ret else None
 
-    return img
-
-def gen_frames():
-    frame_count = 0 
-    process_per_frame = 1
-
+def main():
     while True:
         img = get_frame()
         if img is None:
-            continue 
-
-        if frame_count % process_per_frame == 0:
-            blob = cv2.dnn.blobFromImage(img, 1 / 255, (whT, whT), [0, 0, 0], 1, crop=False)
-            net.setInput(blob)
-            layernames = net.getLayerNames()
-            outputNames = [layernames[i - 1] for i in net.getUnconnectedOutLayers().flatten()]
-            outputs = net.forward(outputNames)
-
-            with app.app_context():
-                findObjects(outputs, img)
-
-        ret, buffer = cv2.imencode('.jpg', img)
-        if not ret:
             continue
+        blob = cv2.dnn.blobFromImage(img, 1 / 255, (whT, whT), [0, 0, 0], 1, crop=False)
+        net.setInput(blob)
+        layernames = net.getLayerNames()
+        outputNames = [layernames[i - 1] for i in net.getUnconnectedOutLayers().flatten()]
+        outputs = net.forward(outputNames)
 
-        yield (b'--frame\r\n'
-               b'Content-Type: image/jpeg\r\n\r\n' + buffer.tobytes() + b'\r\n')
+        if findObjects(outputs, img):
+            logging.info("Person detected, servo activated.")
+        else:
+            logging.info("No person detected.")
 
-        frame_count += 1
-
-@app.route('/')
-def index():
-    return render_template('index.html')
-
-@app.route('/video_feed')
-def video_feed():
-    return Response(gen_frames(), mimetype='multipart/x-mixed-replace; boundary=frame')
-
+        cv2.imshow('Object Detection', img)
+        if cv2.waitKey(1) & 0xFF == ord('q'):
+            break
+    cv2.destroyAllWindows()
 if __name__ == '__main__':
-    port = int(os.environ.get('PORT', 5003))
-    socketio.run(app, host='0.0.0.0', port=port, debug=True, allow_unsafe_werkzeug=True)
+    main()

@@ -197,3 +197,17 @@
 2024-11-10 06:16:12,663 - INFO - 192.168.1.13 - - [10/Nov/2024 06:16:12] "GET /socket.io/?EIO=4&transport=polling&t=PCJDhA7&sid=dIzvfWzf54IvGzp5AAAA HTTP/1.1" 200 -
 2024-11-10 06:16:13,191 - INFO - 192.168.1.13 - - [10/Nov/2024 06:16:13] "POST /socket.io/?EIO=4&transport=polling&t=PCJDhRp&sid=dIzvfWzf54IvGzp5AAAA HTTP/1.1" 200 -
 2024-11-10 06:16:13,191 - INFO - 192.168.1.13 - - [10/Nov/2024 06:16:13] "GET /socket.io/?EIO=4&transport=polling&t=PCJDhJz&sid=dIzvfWzf54IvGzp5AAAA HTTP/1.1" 200 -
+2024-11-12 12:02:31,126 - WARNING - WebSocket transport not available. Install simple-websocket for improved performance.
+2024-11-12 12:02:31,182 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5003
+ * Running on http://10.24.40.175:5003
+2024-11-12 12:02:31,182 - INFO - [33mPress CTRL+C to quit[0m
+2024-11-12 12:02:31,182 - INFO -  * Restarting with stat
+2024-11-12 16:05:46,179 - WARNING - WebSocket transport not available. Install simple-websocket for improved performance.
+2024-11-12 16:05:46,194 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5003
+ * Running on http://10.24.40.175:5003
+2024-11-12 16:05:46,194 - INFO - [33mPress CTRL+C to quit[0m
+2024-11-12 16:05:46,194 - INFO -  * Restarting with stat
