@@ -53,7 +53,7 @@ def findObjects(outputs, img):
                 confs.append(float(confidence))
 
     indices = cv2.dnn.NMSBoxes(bbox, confs, confThreshold, nmsThreshold)
-    detected_person = False
+    detected_animal = False
 
     if indices is not None and len(indices) > 0:
         for i in indices.flatten():
@@ -64,10 +64,10 @@ def findObjects(outputs, img):
             cv2.putText(img, label, (x, y - 10), cv2.FONT_HERSHEY_SIMPLEX, 0.6, (255, 0, 255), 2)
 
             if classNames[classIds[i]] not in animals or (classNames[classIds[i]] in animals and classNames[classIds[i]] in obj):
-                detected_person = True
+                detected_animal = True
                 arduino.write(b'1') 
 
-    return detected_person
+    return detected_animal
 
 def get_frame():
     cap = cv2.VideoCapture(0, cv2.CAP_DSHOW)
