@@ -4,6 +4,8 @@ import logging
 import time
 import serial
 
+animals = ['bird','cat','dog','horse','sheep','cow','elephant','bear','zebra','giraffe','person']
+
 logging.basicConfig(
     filename='app(arduino).log',
     level=logging.INFO,
@@ -24,7 +26,7 @@ net = cv2.dnn.readNetFromDarknet(modelConfig, modelWeights)
 net.setPreferableBackend(cv2.dnn.DNN_BACKEND_OPENCV)
 net.setPreferableTarget(cv2.dnn.DNN_TARGET_CPU)
 
-arduino_port = 'COM5'
+arduino_port = 'COM8'
 baud_rate = 9600
 arduino = serial.Serial(arduino_port, baud_rate)
 
@@ -55,7 +57,7 @@ def findObjects(outputs, img):
             label = f'{classNames[classIds[i]].upper()} {int(confs[i] * 100)}%'
             cv2.putText(img, label, (x, y - 10), cv2.FONT_HERSHEY_SIMPLEX, 0.6, (255, 0, 255), 2)
 
-            if classNames[classIds[i]] == 'person':
+            if classNames[classIds[i]] not in animals:
                 detected_person = True
                 arduino.write(b'1') 
 
@@ -94,3 +96,4 @@ def main():
     cv2.destroyAllWindows()
 if __name__ == '__main__':
     main()
+    
