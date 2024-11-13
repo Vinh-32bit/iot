@@ -5,7 +5,13 @@ import time
 import serial
 
 animals = ['bird','cat','dog','horse','sheep','cow','elephant','bear','zebra','giraffe','person']
-
+obj = ["bicycle", "car", "motorbike", "aeroplane", "bus", "train", "truck", "boat",
+                 "traffic light", "fire hydrant", "stop sign", "parking meter", "bench", "backpack", "umbrella", 
+                 "handbag", "tie", "suitcase", "frisbee", "skis", "snowboard", "sports ball", "kite", "baseball bat", 
+                 "baseball glove", "skateboard", "surfboard", "tennis racket", "bottle", "wine glass", "cup", "fork", 
+                 "knife", "spoon", "bowl", "chair", "sofa", "pottedplant", "bed", "diningtable", "toilet", "tvmonitor", 
+                 "laptop", "mouse", "remote", "keyboard", "cell phone", "microwave", "oven", "toaster", "sink", 
+                 "refrigerator", "book", "clock", "vase", "scissors", "teddy bear", "hair drier", "toothbrush"]
 logging.basicConfig(
     filename='app(arduino).log',
     level=logging.INFO,
@@ -57,7 +63,7 @@ def findObjects(outputs, img):
             label = f'{classNames[classIds[i]].upper()} {int(confs[i] * 100)}%'
             cv2.putText(img, label, (x, y - 10), cv2.FONT_HERSHEY_SIMPLEX, 0.6, (255, 0, 255), 2)
 
-            if classNames[classIds[i]] not in animals:
+            if classNames[classIds[i]] not in animals or (classNames[classIds[i]] in animals and classNames[classIds[i]] in obj):
                 detected_person = True
                 arduino.write(b'1') 
 
