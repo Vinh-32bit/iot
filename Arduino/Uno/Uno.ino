@@ -35,7 +35,7 @@ void setup() {
   digitalWrite(S1, LOW);
 
   // Gắn servo 1 vào chân 9, servo 2 vào chân 10 và servo 3 vào chân 11
-  myservo1.attach(9); 
+  myservo1.attach(9);
   myservo2.attach(10); 
   myservo3.attach(11);
 
@@ -84,7 +84,7 @@ void loop() {
   if (Serial.available() > 0) {
     int command = Serial.read();  // Đọc lệnh từ Python
     if (command == '1') {
-      myservo3.write(110);  // Quay servo3 tới 110 độ
+      myservo3.write(160);  // Quay servo3 tới 110 độ
       delay(150);
       myservo3.write(0);    // Quay về 0 độ
     }
@@ -99,12 +99,12 @@ void loop() {
 
   // Phân loại màu lạnh
   if (redValue >= 0 && redValue <= 200 && greenValue >= 0 && greenValue <= 255 && blueValue >= 0 && blueValue <= 255) {
-    myservo2.write(110);
-    delay(150);
+    myservo2.write(160);
+    delay(20);
     myservo2.write(0);
   }
 // Tạm dừng trước lần đọc tiếp theo
-  delay(1000);
+  delay(500);
 }
 
 // Định nghĩa hàm normalize

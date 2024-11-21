@@ -12,6 +12,7 @@ obj = ["bicycle", "car", "motorbike", "aeroplane", "bus", "train", "truck", "boa
                  "knife", "spoon", "bowl", "chair", "sofa", "pottedplant", "bed", "diningtable", "toilet", "tvmonitor", 
                  "laptop", "mouse", "remote", "keyboard", "cell phone", "microwave", "oven", "toaster", "sink", 
                  "refrigerator", "book", "clock", "vase", "scissors", "teddy bear", "hair drier", "toothbrush"]
+
 logging.basicConfig(
     filename='app(arduino).log',
     level=logging.INFO,
@@ -63,9 +64,9 @@ def findObjects(outputs, img):
             label = f'{classNames[classIds[i]].upper()} {int(confs[i] * 100)}%'
             cv2.putText(img, label, (x, y - 10), cv2.FONT_HERSHEY_SIMPLEX, 0.6, (255, 0, 255), 2)
 
-            if classNames[classIds[i]] not in animals or (classNames[classIds[i]] in animals and classNames[classIds[i]] in obj):
+            if classNames[classIds[i]] not in animals:
                 detected_animal = True
-                arduino.write(b'1') 
+                arduino.write('1'.encode())
 
     return detected_animal
 
@@ -75,7 +76,7 @@ def get_frame():
     if not cap.isOpened():
         logging.error("Cannot open camera.")
         return None
-    time.sleep(0.2)
+    time.sleep(0)
     ret, img = cap.read()
     cap.release()  
     return img if ret else None
@@ -100,6 +101,6 @@ def main():
         if cv2.waitKey(1) & 0xFF == ord('q'):
             break
     cv2.destroyAllWindows()
+
 if __name__ == '__main__':
     main()
-    

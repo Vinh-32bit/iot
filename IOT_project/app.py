@@ -139,7 +139,7 @@ def findObjects(outputs: List[np.ndarray], img: np.ndarray) -> List[str]:
     except Exception as e:
         logging.error("Lỗi nhận dạng vật thể: %s", e)
 
-    return list(detected_objects.keys()), time.sleep(0.2)
+    return list(detected_objects.keys())
 
 def get_frame():
     global cap
@@ -148,7 +148,6 @@ def get_frame():
         if not cap.isOpened():
             logging.error("Không thể mở camera.")
             return None
-    time.sleep(0.2)
     ret, img = cap.read()
     if not ret:
         logging.warning("Không thể nhận khung hình từ camera. Đang khởi tạo lại camera...")
