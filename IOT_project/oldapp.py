@@ -16,7 +16,7 @@ logging.basicConfig(
     format='%(asctime)s - %(levelname)s - %(message)s',
 )
 
-url = 'http://192.168.0.195/320x320.jpg'  #URL của esp32
+url = 'http://192.168.1.4/480x320.jpg'  #URL của esp32
 
 whT = 320
 confThreshold = 0.5
