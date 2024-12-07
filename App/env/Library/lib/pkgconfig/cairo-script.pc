@@ -1,0 +1,8 @@
+prefix=C:/Users/NGAIVINH/Desktop/App/Python/env/Library
+includedir=${prefix}/include
+
+Name: cairo-script
+Description: script surface backend for cairo graphics library
+Version: 1.18.0
+Requires: cairo, zlib
+Cflags: -I${includedir}

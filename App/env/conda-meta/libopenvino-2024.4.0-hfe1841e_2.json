@@ -1,0 +1,53 @@
+{
+  "build": "hfe1841e_2",
+  "build_number": 2,
+  "channel": "https://conda.anaconda.org/conda-forge/win-64",
+  "constrains": [],
+  "depends": [
+    "ucrt >=10.0.20348.0",
+    "vc >=14.2,<15",
+    "vc14_runtime >=14.29.30139",
+    "pugixml >=1.14,<1.15.0a0",
+    "tbb >=2021.13.0"
+  ],
+  "extracted_package_dir": "C:\\Users\\NGAIVINH\\.conda\\pkgs\\libopenvino-2024.4.0-hfe1841e_2",
+  "files": [
+    "Library/bin/openvino.dll",
+    "Library/bin/openvino_c.dll"
+  ],
+  "fn": "libopenvino-2024.4.0-hfe1841e_2.conda",
+  "license": "",
+  "link": {
+    "source": "C:\\Users\\NGAIVINH\\.conda\\pkgs\\libopenvino-2024.4.0-hfe1841e_2",
+    "type": 1
+  },
+  "md5": "ca1f434dc9b599772c9a9ba0e10c34e7",
+  "name": "libopenvino",
+  "package_tarball_full_path": "C:\\Users\\NGAIVINH\\.conda\\pkgs\\libopenvino-2024.4.0-hfe1841e_2.conda",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "Library/bin/openvino.dll",
+        "path_type": "hardlink",
+        "sha256": "1ee804b6d58b761f948874cc552f3124674c61cb1c0f0dcf321b29d9eb7f2770",
+        "sha256_in_prefix": "1ee804b6d58b761f948874cc552f3124674c61cb1c0f0dcf321b29d9eb7f2770",
+        "size_in_bytes": 13396480
+      },
+      {
+        "_path": "Library/bin/openvino_c.dll",
+        "path_type": "hardlink",
+        "sha256": "9e31bf4d062676f8ee53db3a37e7c625647d1cdfb257279807938404b51db297",
+        "sha256_in_prefix": "9e31bf4d062676f8ee53db3a37e7c625647d1cdfb257279807938404b51db297",
+        "size_in_bytes": 202752
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "None",
+  "sha256": "eb24dc441b6234a7f2259b0f34484cc4ab7b2c0ef37e6a78467772c826b3234d",
+  "size": 3315154,
+  "subdir": "win-64",
+  "timestamp": 1729596416000,
+  "url": "https://conda.anaconda.org/conda-forge/win-64/libopenvino-2024.4.0-hfe1841e_2.conda",
+  "version": "2024.4.0"
+}

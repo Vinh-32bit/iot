@@ -1,0 +1,4 @@
+[Thumbnailer Entry]
+TryExec=C:/Users/NGAIVINH/Desktop/App/Python/env/Library/bin/gdk-pixbuf-thumbnailer
+Exec=C:/Users/NGAIVINH/Desktop/App/Python/env/Library/bin/gdk-pixbuf-thumbnailer -s %s %u %o
+MimeType=image/png;image/jpeg;image/gif;image/tiff;

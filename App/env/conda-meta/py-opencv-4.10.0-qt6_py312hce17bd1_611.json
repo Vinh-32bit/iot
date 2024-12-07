@@ -1,0 +1,35 @@
+{
+  "build": "qt6_py312hce17bd1_611",
+  "build_number": 611,
+  "channel": "https://conda.anaconda.org/conda-forge/win-64",
+  "constrains": [],
+  "depends": [
+    "python_abi 3.12.* *_cp312",
+    "python >=3.12,<3.13.0a0",
+    "numpy >=1.19,<3",
+    "libprotobuf >=5.28.2,<5.28.3.0a0",
+    "libopencv 4.10.0 qt6_py312h7866fcb_611"
+  ],
+  "extracted_package_dir": "C:\\Users\\NGAIVINH\\.conda\\pkgs\\py-opencv-4.10.0-qt6_py312hce17bd1_611",
+  "files": [],
+  "fn": "py-opencv-4.10.0-qt6_py312hce17bd1_611.conda",
+  "license": "Apache-2.0",
+  "link": {
+    "source": "C:\\Users\\NGAIVINH\\.conda\\pkgs\\py-opencv-4.10.0-qt6_py312hce17bd1_611",
+    "type": 1
+  },
+  "md5": "c525a6f27d4841b4d997d685cfdfcce1",
+  "name": "py-opencv",
+  "package_tarball_full_path": "C:\\Users\\NGAIVINH\\.conda\\pkgs\\py-opencv-4.10.0-qt6_py312hce17bd1_611.conda",
+  "paths_data": {
+    "paths": [],
+    "paths_version": 1
+  },
+  "requested_spec": "None",
+  "sha256": "6b18984e3de913acb224e8a2b44adfd1235844cabe978ba2f13c4303187467ae",
+  "size": 1153446,
+  "subdir": "win-64",
+  "timestamp": 1733052122000,
+  "url": "https://conda.anaconda.org/conda-forge/win-64/py-opencv-4.10.0-qt6_py312hce17bd1_611.conda",
+  "version": "4.10.0"
+}

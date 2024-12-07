@@ -1,0 +1,55 @@
+{
+  "build": "hfe1841e_2",
+  "build_number": 2,
+  "channel": "https://conda.anaconda.org/conda-forge/win-64",
+  "constrains": [],
+  "depends": [
+    "ucrt >=10.0.20348.0",
+    "vc >=14.2,<15",
+    "vc14_runtime >=14.29.30139",
+    "pugixml >=1.14,<1.15.0a0",
+    "tbb >=2021.13.0",
+    "khronos-opencl-icd-loader >=2024.5.8",
+    "libopenvino 2024.4.0 hfe1841e_2"
+  ],
+  "extracted_package_dir": "C:\\Users\\NGAIVINH\\.conda\\pkgs\\libopenvino-intel-gpu-plugin-2024.4.0-hfe1841e_2",
+  "files": [
+    "Library/bin/openvino-2024.4.0/cache.json",
+    "Library/bin/openvino-2024.4.0/openvino_intel_gpu_plugin.dll"
+  ],
+  "fn": "libopenvino-intel-gpu-plugin-2024.4.0-hfe1841e_2.conda",
+  "license": "",
+  "link": {
+    "source": "C:\\Users\\NGAIVINH\\.conda\\pkgs\\libopenvino-intel-gpu-plugin-2024.4.0-hfe1841e_2",
+    "type": 1
+  },
+  "md5": "6d7f9d318217a23933801669f61b5be2",
+  "name": "libopenvino-intel-gpu-plugin",
+  "package_tarball_full_path": "C:\\Users\\NGAIVINH\\.conda\\pkgs\\libopenvino-intel-gpu-plugin-2024.4.0-hfe1841e_2.conda",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "Library/bin/openvino-2024.4.0/cache.json",
+        "path_type": "hardlink",
+        "sha256": "0b2ad2a99516a3411ce3fef274e8ae2880b41a6f00c9bac6768cd4a94b87c41c",
+        "sha256_in_prefix": "0b2ad2a99516a3411ce3fef274e8ae2880b41a6f00c9bac6768cd4a94b87c41c",
+        "size_in_bytes": 8840377
+      },
+      {
+        "_path": "Library/bin/openvino-2024.4.0/openvino_intel_gpu_plugin.dll",
+        "path_type": "hardlink",
+        "sha256": "4ce38e42990946f0101d39a8b650865e4d68112b9b1f45dc9e6285f8b43d5228",
+        "sha256_in_prefix": "4ce38e42990946f0101d39a8b650865e4d68112b9b1f45dc9e6285f8b43d5228",
+        "size_in_bytes": 23600128
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "None",
+  "sha256": "5e971f5db8eadc20420a7b9f4d9044d38b7daab3d6179ce9d36b2d1f45e43016",
+  "size": 7173636,
+  "subdir": "win-64",
+  "timestamp": 1729596587000,
+  "url": "https://conda.anaconda.org/conda-forge/win-64/libopenvino-intel-gpu-plugin-2024.4.0-hfe1841e_2.conda",
+  "version": "2024.4.0"
+}

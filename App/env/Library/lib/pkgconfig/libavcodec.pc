@@ -1,0 +1,14 @@
+prefix=C:/Users/NGAIVINH/Desktop/App/Python/env/Library
+exec_prefix=${prefix}
+libdir=C:/Users/NGAIVINH/Desktop/App/Python/env/Library/lib
+includedir=C:/Users/NGAIVINH/Desktop/App/Python/env/Library/include
+
+Name: libavcodec
+Description: FFmpeg codec library
+Version: 61.19.100
+Requires: 
+Requires.private: libswresample >= 5.3.100, libavutil >= 59.39.100
+Conflicts:
+Libs: -L${libdir}  -lavcodec 
+Libs.private: iconv.lib lzma.lib -LC:/Users/NGAIVINH/Desktop/App/Python/env/Library/lib dav1d.lib -LC:/Users/NGAIVINH/Desktop/App/Python/env/Library/lib rsvg-2.0.lib cairo.lib gdk_pixbuf-2.0.lib intl.lib C:/Users/NGAIVINH/Desktop/App/Python/env/Library/lib/libpng.lib C:/Users/NGAIVINH/Desktop/App/Python/env/Library/lib/z.lib C:/Users/NGAIVINH/Desktop/App/Python/env/Library/lib/jpeg.lib C:/Users/NGAIVINH/Desktop/App/Python/env/Library/lib/tiff.lib C:/Users/NGAIVINH/Desktop/App/Python/env/Library/lib/libpng.lib C:/Users/NGAIVINH/Desktop/App/Python/env/Library/lib/z.lib C:/Users/NGAIVINH/Desktop/App/Python/env/Library/lib/jpeg.lib C:/Users/NGAIVINH/Desktop/App/Python/env/Library/lib/tiff.lib gio-2.0.lib iconv.lib shlwapi.lib dnsapi.lib iphlpapi.lib ws2_32.lib gmodule-2.0.lib iconv.lib gobject-2.0.lib iconv.lib ffi.lib glib-2.0.lib iconv.lib ws2_32.lib winmm.lib pcre2-8.lib cairo.lib gdi32.lib msimg32.lib dwrite.lib d2d1.lib windowscodecs.lib fontconfig.lib C:/Users/NGAIVINH/Desktop/App/Python/env/Library/lib/expat.lib freetype.lib png16.lib zlib.lib pixman-1.lib -LC:/Users/NGAIVINH/Desktop/App/Python/env/Library/lib aom.lib -LC:/Users/NGAIVINH/Desktop/App/Python/env/Library/lib opus.lib -LC:/Users/NGAIVINH/Desktop/App/Python/env/Library/lib SvtAv1Enc.lib -LC:/Users/NGAIVINH/Desktop/App/Python/env/Library/lib libx264.lib -LC:/Users/NGAIVINH/Desktop/App/Python/env/Library/lib x265.lib -LC:/Users/NGAIVINH/Desktop/App/Python/env/Library/lib openh264.lib mfuuid.lib ole32.lib strmiids.lib ole32.lib user32.lib -LC:/Users/NGAIVINH/Desktop/App/Python/env/Library/lib zlib.lib
+Cflags: -I${includedir}

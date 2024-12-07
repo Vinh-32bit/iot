@@ -1,0 +1,14 @@
+{
+    "clock": {
+        "count": 1,
+        "type": "Inorganic"
+    },
+    "donut": {
+        "count": 1,
+        "type": "Organic"
+    },
+    "bottle": {
+        "count": 1,
+        "type": "Inorganic"
+    }
+}

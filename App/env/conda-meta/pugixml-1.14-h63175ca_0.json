@@ -1,0 +1,109 @@
+{
+  "build": "h63175ca_0",
+  "build_number": 0,
+  "channel": "https://conda.anaconda.org/conda-forge/win-64",
+  "constrains": [],
+  "depends": [
+    "ucrt >=10.0.20348.0",
+    "vc >=14.2,<15",
+    "vc14_runtime >=14.29.30139"
+  ],
+  "extracted_package_dir": "C:\\Users\\NGAIVINH\\.conda\\pkgs\\pugixml-1.14-h63175ca_0",
+  "files": [
+    "Library/bin/pugixml.dll",
+    "Library/include/pugiconfig.hpp",
+    "Library/include/pugixml.hpp",
+    "Library/lib/cmake/pugixml/pugixml-config-version.cmake",
+    "Library/lib/cmake/pugixml/pugixml-config.cmake",
+    "Library/lib/cmake/pugixml/pugixml-targets-release.cmake",
+    "Library/lib/cmake/pugixml/pugixml-targets.cmake",
+    "Library/lib/pkgconfig/pugixml.pc",
+    "Library/lib/pugixml.lib"
+  ],
+  "fn": "pugixml-1.14-h63175ca_0.conda",
+  "license": "MIT",
+  "link": {
+    "source": "C:\\Users\\NGAIVINH\\.conda\\pkgs\\pugixml-1.14-h63175ca_0",
+    "type": 1
+  },
+  "md5": "6794ab7a1f26ebfe0452297eba029d4f",
+  "name": "pugixml",
+  "package_tarball_full_path": "C:\\Users\\NGAIVINH\\.conda\\pkgs\\pugixml-1.14-h63175ca_0.conda",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "Library/bin/pugixml.dll",
+        "path_type": "hardlink",
+        "sha256": "67f8841708873efa8ffd51e4bb07e77863a63be2f82163eccb5924812984d7bf",
+        "sha256_in_prefix": "67f8841708873efa8ffd51e4bb07e77863a63be2f82163eccb5924812984d7bf",
+        "size_in_bytes": 214528
+      },
+      {
+        "_path": "Library/include/pugiconfig.hpp",
+        "path_type": "hardlink",
+        "sha256": "797e895912fdc50e8265a99000aeebf20dd6901afdb9be8d0d9497ae14333e24",
+        "sha256_in_prefix": "797e895912fdc50e8265a99000aeebf20dd6901afdb9be8d0d9497ae14333e24",
+        "size_in_bytes": 2896
+      },
+      {
+        "_path": "Library/include/pugixml.hpp",
+        "path_type": "hardlink",
+        "sha256": "68ca7eac371875363257c85eea74e8e3d0a2d16e478d6685e140a9217bee36b4",
+        "sha256_in_prefix": "68ca7eac371875363257c85eea74e8e3d0a2d16e478d6685e140a9217bee36b4",
+        "size_in_bytes": 54297
+      },
+      {
+        "_path": "Library/lib/cmake/pugixml/pugixml-config-version.cmake",
+        "path_type": "hardlink",
+        "sha256": "d49a4c5fb6c8cad2832108fed2c611c968b73aeaa1616d9e8ed1d3dad82e68af",
+        "sha256_in_prefix": "d49a4c5fb6c8cad2832108fed2c611c968b73aeaa1616d9e8ed1d3dad82e68af",
+        "size_in_bytes": 2824
+      },
+      {
+        "_path": "Library/lib/cmake/pugixml/pugixml-config.cmake",
+        "path_type": "hardlink",
+        "sha256": "a36e92533720194219c7bd3ba2949fa4f26e97317da9d67952177130fa692071",
+        "sha256_in_prefix": "a36e92533720194219c7bd3ba2949fa4f26e97317da9d67952177130fa692071",
+        "size_in_bytes": 1002
+      },
+      {
+        "_path": "Library/lib/cmake/pugixml/pugixml-targets-release.cmake",
+        "path_type": "hardlink",
+        "sha256": "e3396324aa9f48576b11983c746618c9262e2ec0e6ccec853c60e28039d33ad3",
+        "sha256_in_prefix": "e3396324aa9f48576b11983c746618c9262e2ec0e6ccec853c60e28039d33ad3",
+        "size_in_bytes": 915
+      },
+      {
+        "_path": "Library/lib/cmake/pugixml/pugixml-targets.cmake",
+        "path_type": "hardlink",
+        "sha256": "051e64c8771acd04b5079c6f4005168fcaf1758bc87adb2f4dbb351d3cf3e8d6",
+        "sha256_in_prefix": "051e64c8771acd04b5079c6f4005168fcaf1758bc87adb2f4dbb351d3cf3e8d6",
+        "size_in_bytes": 4625
+      },
+      {
+        "_path": "Library/lib/pkgconfig/pugixml.pc",
+        "file_mode": "text",
+        "path_type": "hardlink",
+        "prefix_placeholder": "D:/bld/pugixml_1696182606440/_h_env",
+        "sha256": "d61896ea91c3f3f9650e28dc62ffe69ae80b162007ba4dd6b162c0df57b5eaab",
+        "sha256_in_prefix": "c3250b427fa0dfcc081eabd29c9be94fbb1e3415379234ec6e680bc8e8e12684",
+        "size_in_bytes": 391
+      },
+      {
+        "_path": "Library/lib/pugixml.lib",
+        "path_type": "hardlink",
+        "sha256": "21268c04e935a2d79f0e3ccec93755b004d67026559dcb4510ae92d3e85d0c7f",
+        "sha256_in_prefix": "21268c04e935a2d79f0e3ccec93755b004d67026559dcb4510ae92d3e85d0c7f",
+        "size_in_bytes": 140562
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "None",
+  "sha256": "68a5cb9a7560b2ce0d72ccebc7f6623e13ca66a67f80feb1094a75199bd1a50c",
+  "size": 111324,
+  "subdir": "win-64",
+  "timestamp": 1696182979000,
+  "url": "https://conda.anaconda.org/conda-forge/win-64/pugixml-1.14-h63175ca_0.conda",
+  "version": "1.14"
+}

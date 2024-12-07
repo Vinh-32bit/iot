@@ -1,0 +1,44 @@
+{
+  "build": "he0c23c2_2",
+  "build_number": 2,
+  "channel": "https://conda.anaconda.org/conda-forge/win-64",
+  "constrains": [],
+  "depends": [
+    "ucrt >=10.0.20348.0",
+    "vc >=14.2,<15",
+    "vc14_runtime >=14.29.30139",
+    "libopenvino 2024.4.0 hfe1841e_2"
+  ],
+  "extracted_package_dir": "C:\\Users\\NGAIVINH\\.conda\\pkgs\\libopenvino-pytorch-frontend-2024.4.0-he0c23c2_2",
+  "files": [
+    "Library/bin/openvino_pytorch_frontend.dll"
+  ],
+  "fn": "libopenvino-pytorch-frontend-2024.4.0-he0c23c2_2.conda",
+  "license": "",
+  "link": {
+    "source": "C:\\Users\\NGAIVINH\\.conda\\pkgs\\libopenvino-pytorch-frontend-2024.4.0-he0c23c2_2",
+    "type": 1
+  },
+  "md5": "61bc081531072227ff4ef79110578933",
+  "name": "libopenvino-pytorch-frontend",
+  "package_tarball_full_path": "C:\\Users\\NGAIVINH\\.conda\\pkgs\\libopenvino-pytorch-frontend-2024.4.0-he0c23c2_2.conda",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "Library/bin/openvino_pytorch_frontend.dll",
+        "path_type": "hardlink",
+        "sha256": "6784ddca81cea47c5c25bc9aac1750951bd8d79e958a347626c804296bff481c",
+        "sha256_in_prefix": "6784ddca81cea47c5c25bc9aac1750951bd8d79e958a347626c804296bff481c",
+        "size_in_bytes": 2438656
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "None",
+  "sha256": "2ed421b6874a1cc924d4a304161a38e5228588822f7833bcedcfdf188bab4e7e",
+  "size": 677080,
+  "subdir": "win-64",
+  "timestamp": 1729596717000,
+  "url": "https://conda.anaconda.org/conda-forge/win-64/libopenvino-pytorch-frontend-2024.4.0-he0c23c2_2.conda",
+  "version": "2024.4.0"
+}

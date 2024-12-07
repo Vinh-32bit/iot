@@ -1,0 +1,14 @@
+prefix=C:/Users/NGAIVINH/Desktop/App/Python/env/Library
+exec_prefix=${prefix}
+libdir=C:/Users/NGAIVINH/Desktop/App/Python/env/Library/lib
+includedir=C:/Users/NGAIVINH/Desktop/App/Python/env/Library/include
+
+Name: libavutil
+Description: FFmpeg utility library
+Version: 59.39.100
+Requires: 
+Requires.private: 
+Conflicts:
+Libs: -L${libdir}  -lavutil 
+Libs.private: -LC:/Users/NGAIVINH/Desktop/App/Python/env/Library/lib libssl.lib libcrypto.lib crypt32.lib ws2_32.lib user32.lib bcrypt.lib
+Cflags: -I${includedir}

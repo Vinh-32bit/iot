@@ -1,0 +1,47 @@
+{
+  "build": "h7d5e7ba_2",
+  "build_number": 2,
+  "channel": "https://conda.anaconda.org/conda-forge/win-64",
+  "constrains": [],
+  "depends": [
+    "ucrt >=10.0.20348.0",
+    "vc >=14.2,<15",
+    "vc14_runtime >=14.29.30139",
+    "libabseil * cxx17*",
+    "libabseil >=20240722.0,<20240723.0a0",
+    "libprotobuf >=5.28.2,<5.28.3.0a0",
+    "libopenvino 2024.4.0 hfe1841e_2"
+  ],
+  "extracted_package_dir": "C:\\Users\\NGAIVINH\\.conda\\pkgs\\libopenvino-onnx-frontend-2024.4.0-h7d5e7ba_2",
+  "files": [
+    "Library/bin/openvino_onnx_frontend.dll"
+  ],
+  "fn": "libopenvino-onnx-frontend-2024.4.0-h7d5e7ba_2.conda",
+  "license": "",
+  "link": {
+    "source": "C:\\Users\\NGAIVINH\\.conda\\pkgs\\libopenvino-onnx-frontend-2024.4.0-h7d5e7ba_2",
+    "type": 1
+  },
+  "md5": "6ac156a9f05804265b464eec179e75a7",
+  "name": "libopenvino-onnx-frontend",
+  "package_tarball_full_path": "C:\\Users\\NGAIVINH\\.conda\\pkgs\\libopenvino-onnx-frontend-2024.4.0-h7d5e7ba_2.conda",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "Library/bin/openvino_onnx_frontend.dll",
+        "path_type": "hardlink",
+        "sha256": "67af5c5491bb2fe3a1cf511dca3916e86c257b7e44b3a3ecd29f8c18c0f7fa8a",
+        "sha256_in_prefix": "67af5c5491bb2fe3a1cf511dca3916e86c257b7e44b3a3ecd29f8c18c0f7fa8a",
+        "size_in_bytes": 3701248
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "None",
+  "sha256": "4565e94965d036c9964dd1368a1150c872c1f13e57c08b7e7d683a9b0fafc62c",
+  "size": 991143,
+  "subdir": "win-64",
+  "timestamp": 1729596659000,
+  "url": "https://conda.anaconda.org/conda-forge/win-64/libopenvino-onnx-frontend-2024.4.0-h7d5e7ba_2.conda",
+  "version": "2024.4.0"
+}

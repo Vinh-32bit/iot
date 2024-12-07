@@ -1,0 +1,44 @@
+{
+  "build": "he0c23c2_2",
+  "build_number": 2,
+  "channel": "https://conda.anaconda.org/conda-forge/win-64",
+  "constrains": [],
+  "depends": [
+    "ucrt >=10.0.20348.0",
+    "vc >=14.2,<15",
+    "vc14_runtime >=14.29.30139",
+    "libopenvino 2024.4.0 hfe1841e_2"
+  ],
+  "extracted_package_dir": "C:\\Users\\NGAIVINH\\.conda\\pkgs\\libopenvino-tensorflow-lite-frontend-2024.4.0-he0c23c2_2",
+  "files": [
+    "Library/bin/openvino_tensorflow_lite_frontend.dll"
+  ],
+  "fn": "libopenvino-tensorflow-lite-frontend-2024.4.0-he0c23c2_2.conda",
+  "license": "",
+  "link": {
+    "source": "C:\\Users\\NGAIVINH\\.conda\\pkgs\\libopenvino-tensorflow-lite-frontend-2024.4.0-he0c23c2_2",
+    "type": 1
+  },
+  "md5": "06f6a53a17c793422a1f3c6ca2bd7a74",
+  "name": "libopenvino-tensorflow-lite-frontend",
+  "package_tarball_full_path": "C:\\Users\\NGAIVINH\\.conda\\pkgs\\libopenvino-tensorflow-lite-frontend-2024.4.0-he0c23c2_2.conda",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "Library/bin/openvino_tensorflow_lite_frontend.dll",
+        "path_type": "hardlink",
+        "sha256": "c58db5b2244b0d5f09ef299db4a961d4d408db3421bc25f81468b4ef3704cad8",
+        "sha256_in_prefix": "c58db5b2244b0d5f09ef299db4a961d4d408db3421bc25f81468b4ef3704cad8",
+        "size_in_bytes": 1120768
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "None",
+  "sha256": "e2f6c8c63b3c4a3800a0f8bab558cf7075822a3aa105399cf0c26c1137b02b5a",
+  "size": 324037,
+  "subdir": "win-64",
+  "timestamp": 1729596776000,
+  "url": "https://conda.anaconda.org/conda-forge/win-64/libopenvino-tensorflow-lite-frontend-2024.4.0-he0c23c2_2.conda",
+  "version": "2024.4.0"
+}

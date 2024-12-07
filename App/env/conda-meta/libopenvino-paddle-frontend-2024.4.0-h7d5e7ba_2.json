@@ -1,0 +1,47 @@
+{
+  "build": "h7d5e7ba_2",
+  "build_number": 2,
+  "channel": "https://conda.anaconda.org/conda-forge/win-64",
+  "constrains": [],
+  "depends": [
+    "ucrt >=10.0.20348.0",
+    "vc >=14.2,<15",
+    "vc14_runtime >=14.29.30139",
+    "libabseil * cxx17*",
+    "libabseil >=20240722.0,<20240723.0a0",
+    "libprotobuf >=5.28.2,<5.28.3.0a0",
+    "libopenvino 2024.4.0 hfe1841e_2"
+  ],
+  "extracted_package_dir": "C:\\Users\\NGAIVINH\\.conda\\pkgs\\libopenvino-paddle-frontend-2024.4.0-h7d5e7ba_2",
+  "files": [
+    "Library/bin/openvino_paddle_frontend.dll"
+  ],
+  "fn": "libopenvino-paddle-frontend-2024.4.0-h7d5e7ba_2.conda",
+  "license": "",
+  "link": {
+    "source": "C:\\Users\\NGAIVINH\\.conda\\pkgs\\libopenvino-paddle-frontend-2024.4.0-h7d5e7ba_2",
+    "type": 1
+  },
+  "md5": "2601cb643104e143a84eedde3b9d4689",
+  "name": "libopenvino-paddle-frontend",
+  "package_tarball_full_path": "C:\\Users\\NGAIVINH\\.conda\\pkgs\\libopenvino-paddle-frontend-2024.4.0-h7d5e7ba_2.conda",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "Library/bin/openvino_paddle_frontend.dll",
+        "path_type": "hardlink",
+        "sha256": "32fc729ad8fee796e77745d40a40975e56ebd9af317a7486b2c67910cbb3b423",
+        "sha256_in_prefix": "32fc729ad8fee796e77745d40a40975e56ebd9af317a7486b2c67910cbb3b423",
+        "size_in_bytes": 1412096
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "None",
+  "sha256": "49700da26843986434f340b44407eb742f3128cc73392d1f3b050bca3321b1a8",
+  "size": 419425,
+  "subdir": "win-64",
+  "timestamp": 1729596690000,
+  "url": "https://conda.anaconda.org/conda-forge/win-64/libopenvino-paddle-frontend-2024.4.0-h7d5e7ba_2.conda",
+  "version": "2024.4.0"
+}

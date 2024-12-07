@@ -1,0 +1,45 @@
+{
+  "build": "h372dad0_2",
+  "build_number": 2,
+  "channel": "https://conda.anaconda.org/conda-forge/win-64",
+  "constrains": [],
+  "depends": [
+    "ucrt >=10.0.20348.0",
+    "vc >=14.2,<15",
+    "vc14_runtime >=14.29.30139",
+    "pugixml >=1.14,<1.15.0a0",
+    "libopenvino 2024.4.0 hfe1841e_2"
+  ],
+  "extracted_package_dir": "C:\\Users\\NGAIVINH\\.conda\\pkgs\\libopenvino-ir-frontend-2024.4.0-h372dad0_2",
+  "files": [
+    "Library/bin/openvino_ir_frontend.dll"
+  ],
+  "fn": "libopenvino-ir-frontend-2024.4.0-h372dad0_2.conda",
+  "license": "",
+  "link": {
+    "source": "C:\\Users\\NGAIVINH\\.conda\\pkgs\\libopenvino-ir-frontend-2024.4.0-h372dad0_2",
+    "type": 1
+  },
+  "md5": "63b4d6cbf08c634fe74b428811204368",
+  "name": "libopenvino-ir-frontend",
+  "package_tarball_full_path": "C:\\Users\\NGAIVINH\\.conda\\pkgs\\libopenvino-ir-frontend-2024.4.0-h372dad0_2.conda",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "Library/bin/openvino_ir_frontend.dll",
+        "path_type": "hardlink",
+        "sha256": "72a4ae147b735a8196eab40252c6a61a359cedc93a0f894d663ac31ef382059a",
+        "sha256_in_prefix": "72a4ae147b735a8196eab40252c6a61a359cedc93a0f894d663ac31ef382059a",
+        "size_in_bytes": 363520
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "None",
+  "sha256": "d6d7f9d2fcbdffc39a2256c838c3b26a0826330576b844e48f5f050551887032",
+  "size": 157792,
+  "subdir": "win-64",
+  "timestamp": 1729596630000,
+  "url": "https://conda.anaconda.org/conda-forge/win-64/libopenvino-ir-frontend-2024.4.0-h372dad0_2.conda",
+  "version": "2024.4.0"
+}
